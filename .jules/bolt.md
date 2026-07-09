@@ -1,0 +1,3 @@
+## 2026-07-09 - Google Font Pruning Risks
+**Learning:** When pruning Google Font weights to reduce payload, it is critical to audit not just explicit 'font-weight' declarations in CSS, but also HTML tags that imply weight (like <h1>-<h6>, <strong>, <b>) or browser default styles. Removing these weights can lead to "faux bold" visual regressions where the browser attempts to synthesize bolding, often with poor results.
+**Action:** Always verify visual consistency across all key typographic elements after changing font weight requests, and ensure common header/emphasis weights (600, 700) are retained if those tags are present.

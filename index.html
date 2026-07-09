@@ -6,6 +6,8 @@
 <title>Advanced Automotive Concepts — Safelink Theft Recovery for Dealers</title>
 <meta name="description" content="Safelink GPS theft recovery — a profitable, no-monthly-fee F&I menu product for franchise, independent, and powersport dealers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Performance: Preconnect to font server to reduce DNS/TCP/TLS latency -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -79,10 +81,6 @@
     70%{box-shadow:0 0 0 8px rgba(163,30,44,0);}
     100%{box-shadow:0 0 0 0 rgba(163,30,44,0);}
   }
-  @media (prefers-reduced-motion: reduce){
-    .coord::before{animation:none;}
-  }
-
   /* ---------- header ---------- */
   header{
     position:sticky;top:0;z-index:50;
@@ -441,6 +439,11 @@
 
   .fade-up{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
   .fade-up.in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce) {
+    .coord::before, .radar .pin { animation: none !important; }
+    .fade-up { transition: none !important; transform: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -650,7 +653,7 @@
         <h2>Let's put Safelink on your menu.</h2>
         <p>15 minutes to walk through per-unit economics, install logistics, and how Safelink slots into your current F&amp;I presentation — no obligation.</p>
         <form class="cform" id="dealerForm" novalidate>
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="row2">
             <div>
               <label for="f-name">Name</label>
@@ -733,7 +736,12 @@
   // Scroll reveal
   const observer = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); }
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        // Performance optimization: Stop observing element after it has faded in
+        // to reduce main thread work during scrolling.
+        observer.unobserve(e.target);
+      }
     });
   }, {threshold:0.12});
   document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
