@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Consult — Advanced Automotive Concepts</title>
+<meta name="description" content="Book a 15-minute consult to walk through Safelink Theft Recovery economics, install logistics, and your dealership's F&I menu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="Safelink Theft Recovery logo">
+      <div class="brand-text">ADVANCED AUTOMOTIVE CONCEPTS
+        <span>DEALER F&amp;I SOLUTIONS · LAKE FOREST, CA</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Dashboard</a>
+      <a href="product.html">Product</a>
+      <a href="index.html#partners">Partners</a>
+      <a href="contact.html" class="nav-cta active">Book a Consult</a>
+    </nav>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="platform.html">Dashboard</a>
+    <a href="product.html">Product</a>
+    <a href="index.html#partners">Partners</a>
+    <a href="contact.html" class="nav-cta">Book a Consult</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="wrap page-hero-inner">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+    <div class="coord" style="margin-top:16px;">BOOK A CONSULT</div>
+    <h1>Let's put Safelink on your menu.</h1>
+    <p class="lead">15 minutes to walk through per-unit economics, install logistics, and how Safelink slots into your current F&amp;I presentation — no obligation.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-grid fade-up">
+      <div class="cta-left">
+        <div class="coord" style="margin-bottom:16px;">DEALER INQUIRY</div>
+        <h2>Tell us about your store.</h2>
+        <p>Include your current F&amp;I menu, monthly pre-owned volume, or anything else that helps us prep for the call.</p>
+        <form class="cform" id="dealerForm" novalidate>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+          <div class="row2">
+            <div>
+              <label for="f-name">Name</label>
+              <input id="f-name" type="text" name="Name" required>
+            </div>
+            <div>
+              <label for="f-dealer">Dealership</label>
+              <input id="f-dealer" type="text" name="Dealership" required>
+            </div>
+          </div>
+          <div class="row2">
+            <div>
+              <label for="f-email">Email</label>
+              <input id="f-email" type="email" name="Email" required>
+            </div>
+            <div>
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" type="tel" name="Phone">
+            </div>
+          </div>
+          <div>
+            <label for="f-type">Dealership type</label>
+            <select id="f-type" name="Dealership Type">
+              <option>Franchise dealer</option>
+              <option>Independent dealer</option>
+              <option>Powersport / motorcycle dealer</option>
+              <option>Fleet operator</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-msg">What are you looking to solve?</label>
+            <textarea id="f-msg" name="Message" placeholder="e.g. Loss rate on pre-owned units, current F&I menu, timing"></textarea>
+          </div>
+          <button type="submit" id="formSubmitBtn">Send Inquiry</button>
+          <div class="form-note" id="formStatus">Submissions are emailed directly to mlarsen@advancedautomotiveconcepts.net.</div>
+        </form>
+      </div>
+      <div class="cta-right">
+        <div class="sig">
+          <div class="name">Mark Larsen</div>
+          <div class="role mono">AUTHORIZED AGENT — SAFELINK · REVV1 · UPLIFT BDC</div>
+          <div class="field">Advanced Automotive Concepts</div>
+          <div class="field">11 Orchard Rd, Lake Forest, CA 92630</div>
+          <div class="field"><a href="tel:19493241208">(949) 324-1208</a></div>
+          <div class="field"><a href="mailto:mlarsen@advancedautomotiveconcepts.net">mlarsen@advancedautomotiveconcepts.net</a></div>
+          <div class="field" style="margin-top:14px;">
+            <a href="https://www.linkedin.com/company/advancedautomotiveconcepts" target="_blank" rel="noopener">LinkedIn</a> ·
+            <a href="https://x.com/AdvAutoConcepts" target="_blank" rel="noopener">X</a> ·
+            <a href="https://www.facebook.com/advancedautomotiveconcepts/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <div class="contact-list" style="margin-top:26px;">
+          <a href="tel:19493241208" style="color:#D7D5CF;">(949) 324-1208</a>
+          <a href="mailto:mlarsen@advancedautomotiveconcepts.net" style="color:#D7D5CF;">mlarsen@advancedautomotiveconcepts.net</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div>© <span id="year"></span> Advanced Automotive Concepts · Lake Forest, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Dashboard</a>
+      <a href="product.html">Product</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="foot-social">
+      <a href="https://www.linkedin.com/company/advancedautomotiveconcepts" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/AdvAutoConcepts" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://www.facebook.com/advancedautomotiveconcepts/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  var form = document.getElementById('dealerForm');
+  var statusEl = document.getElementById('formStatus');
+  var submitBtn = document.getElementById('formSubmitBtn');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (form.querySelector('[name="_honey"]').value) return; // bot trap
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var data = Object.fromEntries(new FormData(form).entries());
+    data._subject = 'New dealer inquiry — Advanced Automotive Concepts website';
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    statusEl.textContent = 'Sending your message…';
+    statusEl.style.color = '';
+
+    try {
+      var res = await fetch('https://formsubmit.co/ajax/mlarsen@advancedautomotiveconcepts.net', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!res.ok) throw new Error('Request failed');
+
+      form.reset();
+      submitBtn.textContent = 'Send Inquiry';
+      statusEl.textContent = 'Thanks — your message was sent. We\'ll be in touch shortly.';
+      statusEl.style.color = 'var(--teal)';
+    } catch (err) {
+      submitBtn.textContent = 'Send Inquiry';
+      statusEl.textContent = 'Something went wrong. Please email mlarsen@advancedautomotiveconcepts.net directly.';
+      statusEl.style.color = 'var(--red)';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
