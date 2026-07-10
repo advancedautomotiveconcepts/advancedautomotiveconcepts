@@ -730,12 +730,15 @@
     });
   });
 
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('in'); }
+  // Scroll reveal — unobserve after transition to reduce main-thread overhead
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
     });
-  }, {threshold:0.12});
+  }, {threshold: 0.12});
   document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 
   // Contact form — AJAX submit, stays on page, inline success/error
