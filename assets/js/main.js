@@ -18,10 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Scroll reveal
+  // Scroll reveal - optimized with unobserve to reduce main-thread work after transition
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); }
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
