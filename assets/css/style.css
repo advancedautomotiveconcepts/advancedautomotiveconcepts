@@ -15,6 +15,27 @@
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--red);
+  color: var(--white);
+  padding: 8px 16px;
+  z-index: 1000;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--white);
+  outline-offset: -4px;
+}
 body{
   margin:0;
   background:var(--paper);
