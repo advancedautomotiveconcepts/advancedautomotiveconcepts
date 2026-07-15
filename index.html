@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header>
   <div class="wrap nav">
@@ -20,7 +21,7 @@
       </div>
     </a>
     <nav class="nav-links">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="platform.html">Dashboard</a>
       <a href="product.html">Product</a>
       <a href="index.html#partners">Partners</a>
@@ -33,7 +34,7 @@
     </button>
   </div>
   <nav class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
+    <a href="index.html" aria-current="page">Home</a>
     <a href="platform.html">Dashboard</a>
     <a href="product.html">Product</a>
     <a href="index.html#partners">Partners</a>
@@ -41,6 +42,7 @@
   </nav>
 </header>
 
+<main id="main-content" tabindex="-1">
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="radar"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="pin"></span></div>
@@ -244,6 +246,7 @@
     <a href="contact.html" class="btn btn-primary">Book a Consult</a>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap foot-row">
