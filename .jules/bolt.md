@@ -1,0 +1,3 @@
+## 2026-07-17 - Google Fonts Optimization
+**Learning:** Google Fonts allows multiple font families to be combined in a single request. By auditing the actual CSS classes and elements, we found that several loaded font weights (Inter 500, 600; Oswald 700; JetBrains Mono 500) were unused. Pruning them reduces the generated Google Fonts CSS stylesheet size significantly.
+**Action:** Always audit font weight usage in the project's CSS files and HTML elements (such as `<strong>`, `<b>`, or CSS `font-weight` properties) to prune unused font weights from GFonts query parameters, speeding up the critical rendering path.
