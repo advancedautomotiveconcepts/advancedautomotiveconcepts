@@ -59,21 +59,21 @@
         <h2>Tell us about your store.</h2>
         <p>Include your current F&amp;I menu, monthly pre-owned volume, or anything else that helps us prep for the call.</p>
         <form class="cform" id="dealerForm" novalidate>
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="row2">
             <div>
-              <label for="f-name">Name</label>
-              <input id="f-name" type="text" name="Name" required>
+              <label for="f-name">Name <span style="color: var(--red);">*</span></label>
+              <input id="f-name" type="text" name="Name" required aria-required="true">
             </div>
             <div>
-              <label for="f-dealer">Dealership</label>
-              <input id="f-dealer" type="text" name="Dealership" required>
+              <label for="f-dealer">Dealership <span style="color: var(--red);">*</span></label>
+              <input id="f-dealer" type="text" name="Dealership" required aria-required="true">
             </div>
           </div>
           <div class="row2">
             <div>
-              <label for="f-email">Email</label>
-              <input id="f-email" type="email" name="Email" required>
+              <label for="f-email">Email <span style="color: var(--red);">*</span></label>
+              <input id="f-email" type="email" name="Email" required aria-required="true">
             </div>
             <div>
               <label for="f-phone">Phone</label>
@@ -95,7 +95,7 @@
             <textarea id="f-msg" name="Message" placeholder="e.g. Loss rate on pre-owned units, current F&I menu, timing"></textarea>
           </div>
           <button type="submit" id="formSubmitBtn">Send Inquiry</button>
-          <div class="form-note" id="formStatus">Submissions are emailed directly to mlarsen@advancedautomotiveconcepts.net.</div>
+          <div class="form-note" id="formStatus" aria-live="polite">Submissions are emailed directly to mlarsen@advancedautomotiveconcepts.net.</div>
         </form>
       </div>
       <div class="cta-right">
