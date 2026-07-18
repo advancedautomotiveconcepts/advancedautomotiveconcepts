@@ -14,7 +14,8 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <img src="assets/img/logo.png" alt="Safelink Theft Recovery logo">
+      <!-- Performance Optimization: Added explicit width, height to prevent CLS, and decoding="async" to offload main thread decoding -->
+      <img src="assets/img/logo.png" alt="Safelink Theft Recovery logo" width="400" height="380" decoding="async">
       <div class="brand-text">ADVANCED AUTOMOTIVE CONCEPTS
         <span>DEALER F&amp;I SOLUTIONS · LAKE FOREST, CA</span>
       </div>
@@ -60,7 +61,8 @@
     <div class="split fade-up">
       <div class="split-media">
         <span class="shot-tag mono">GFORCE UNIT</span>
-        <img class="shot" src="assets/img/gforce-device.jpg" alt="Safelink GForce GPS tracking device shown in hand for scale">
+        <!-- Performance Optimization: Added loading="lazy" to defer off-screen image load, and explicit dimensions to prevent layout shifts -->
+        <img class="shot" src="assets/img/gforce-device.jpg" alt="Safelink GForce GPS tracking device shown in hand for scale" width="900" height="397" loading="lazy" decoding="async">
       </div>
       <div class="split-copy">
         <div class="coord">INTELLIGENT INVENTORY TRACKING</div>
@@ -120,7 +122,7 @@
   <div class="wrap">
     <div class="split reverse fade-up">
       <div class="split-media">
-        <img class="shot" src="assets/img/install-diagram.jpg" alt="Diagram of recommended Safelink install placements inside a vehicle">
+        <img class="shot" src="assets/img/install-diagram.jpg" alt="Diagram of recommended Safelink install placements inside a vehicle" width="1400" height="787" loading="lazy" decoding="async">
       </div>
       <div class="split-copy">
         <div class="coord">INSTALL IN 60 SECONDS</div>
@@ -160,7 +162,7 @@
   <div class="wrap">
     <div class="split fade-up">
       <div class="split-media">
-        <img class="shot" src="assets/img/police-recovery.jpg" alt="Emergency vehicle lights representing law enforcement coordination during a recovery">
+        <img class="shot" src="assets/img/police-recovery.jpg" alt="Emergency vehicle lights representing law enforcement coordination during a recovery" width="900" height="1053" loading="lazy" decoding="async">
       </div>
       <div class="split-copy">
         <div class="coord">RECOVERY PROCESS</div>
