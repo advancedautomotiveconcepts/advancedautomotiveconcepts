@@ -1,0 +1,3 @@
+## 2024-07-18 - Image Performance Optimization
+**Learning:** Adding explicit dimensions, `loading="lazy"`, and `decoding="async"` to image tags is an incredibly low-risk, high-return performance improvement. Providing explicit `width` and `height` gives the browser aspect-ratio metadata, eliminating Cumulative Layout Shift (CLS) entirely. Utilizing `loading="lazy"` defers off-screen image loads, reducing initial payload, and `decoding="async"` offloads image decoding from the main thread.
+**Action:** Always audit `<img>` tags across static pages first for missing width, height, loading, and decoding attributes to achieve a swift and robust performance/UX boost.
