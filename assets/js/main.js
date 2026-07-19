@@ -9,12 +9,33 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerBtn.addEventListener('click', function () {
       var isOpen = mobileMenu.classList.toggle('open');
       burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      burgerBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
     mobileMenu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () {
         mobileMenu.classList.remove('open');
         burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.setAttribute('aria-label', 'Open menu');
       });
+    });
+    // Close mobile menu on clicking outside
+    document.addEventListener('click', function (e) {
+      if (!burgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (mobileMenu.classList.contains('open')) {
+          mobileMenu.classList.remove('open');
+          burgerBtn.setAttribute('aria-expanded', 'false');
+          burgerBtn.setAttribute('aria-label', 'Open menu');
+        }
+      }
+    });
+    // Close mobile menu on Escape key press
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.setAttribute('aria-label', 'Open menu');
+        burgerBtn.focus();
+      }
     });
   }
 
