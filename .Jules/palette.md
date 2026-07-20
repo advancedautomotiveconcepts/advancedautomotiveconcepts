@@ -1,0 +1,3 @@
+## 2026-07-20 - Interactive Mobile Menu Accessibility
+**Learning:** Adding baseline ARIA attributes (such as starting states of `aria-expanded="false"`) is not sufficient if they are not dynamically updated as state changes. Furthermore, mobile dropdown overlay menus often lack basic pointer-outside and Escape key interaction handling, creating trapping traps or forcing tedious manual scrolls/clicks.
+**Action:** Always pair mobile overlay toggle states with keyboard listener checks (Escape key to exit and restore focus to trigger) and page-level click listener checks (outside boundary check) to close overlay states elegantly and keep focus in-flow.
