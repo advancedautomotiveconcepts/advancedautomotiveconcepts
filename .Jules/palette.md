@@ -1,0 +1,3 @@
+## 2026-07-21 - Mobile Navigation Toggle Accessibility Pattern
+**Learning:** In static pages, burger buttons often initialize with static ARIA labels (like `aria-label="Open menu"`), which fail to provide accurate context once the menu state changes. Additionally, mobile menus overlaying the content without Escape-to-close keyboard support or click-outside handlers disrupt the expected navigation flow for keyboard and touch users.
+**Action:** Ensure mobile menu toggle states dynamically update both `aria-expanded` and `aria-label`, and implement global listener wrappers for pointer-clicks outside the menu container and keyboard Escape key presses to restore focus safely.
