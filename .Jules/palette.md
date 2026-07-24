@@ -1,0 +1,3 @@
+## 2025-07-24 - Accessible Mobile Menu Interactions
+**Learning:** Basic mobile menu toggles often lack complete accessible behaviors, such as updating the ARIA labels dynamically, handling keyboard Escape key dismissal, and closing when clicking outside. Implementing these behaviors prevents keyboard focus traps and provides a smoother interaction for both screen-reader and pointer users.
+**Action:** Always ensure the mobile menu toggles update `aria-label` (not just `aria-expanded`), support Escape to close (while restoring focus to the trigger), and allow clicking outside to dismiss the menu.
