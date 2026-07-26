@@ -1,0 +1,3 @@
+## 2025-02-15 - Image Loading and Layout Shift Optimization
+**Learning:** Adding explicit image dimensions (width/height attributes) reduces Cumulative Layout Shift (CLS) because the browser can reserve the correct space for images before they load. Additionally, adding `loading="lazy"` to images below the fold prevents unnecessary bandwidth usage and allows the browser to prioritize critical above-the-fold assets.
+**Action:** Always identify below-the-fold images and apply `loading="lazy"`, while adding explicit width and height attributes to all images (with matching CSS rules like `height: auto` or similar where layout flexibility is required) to improve CLS and overall performance score.
