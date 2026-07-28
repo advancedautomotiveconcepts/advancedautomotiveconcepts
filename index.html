@@ -14,7 +14,8 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand">
-      <img src="assets/img/logo.png" alt="Safelink Theft Recovery logo">
+      <!-- Performance: explicit dimensions prevent Cumulative Layout Shift (CLS) -->
+      <img src="assets/img/logo.png" alt="Safelink Theft Recovery logo" width="400" height="380">
       <div class="brand-text">ADVANCED AUTOMOTIVE CONCEPTS
         <span>DEALER F&amp;I SOLUTIONS · LAKE FOREST, CA</span>
       </div>
@@ -97,7 +98,8 @@
     <div class="split fade-up">
       <div class="split-media">
         <span class="shot-tag mono">TRUEPOINT360 · DEALER DASHBOARD</span>
-        <img class="shot" src="assets/img/dash-inventory.jpg" alt="TruePoint360 dealer dashboard showing real-time inventory locations across the lot">
+        <!-- Performance: explicit dimensions prevent CLS; loading="lazy" defers below-the-fold asset loading -->
+        <img class="shot" src="assets/img/dash-inventory.jpg" alt="TruePoint360 dealer dashboard showing real-time inventory locations across the lot" width="1100" height="966" loading="lazy">
       </div>
       <div class="split-copy">
         <div class="coord">SEE YOUR LOT IN REAL TIME</div>
