@@ -1,0 +1,3 @@
+## 2025-01-20 - Mobile Menu Accessibility and Outside Clicks
+**Learning:** In responsive static websites, mobile menus can become highly inaccessible to keyboard and screen reader users if state transitions are not accompanied by proper focus management, keyboard handlers (like closing on Escape and returning focus), and aria-label updates.
+**Action:** When working on mobile menus, always ensure `#burgerBtn` updates its `aria-label` and `aria-expanded` attributes, listens to keydowns for 'Escape' key, closes if click occurs outside the target menu container or button, and returns focus to the trigger element when closed via keyboard.
