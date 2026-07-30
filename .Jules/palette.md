@@ -1,0 +1,3 @@
+## 2025-01-24 - Mobile Menu Keyboard and Pointer Interactions
+**Learning:** Standard mobile burger menus often lack accessibility controls like the Escape key to close the menu or pointer-events to close on outside clicks. Implementing these improves usability for both keyboard and pointer users on small viewports.
+**Action:** Dynamically toggle the `aria-label` attribute on the mobile menu toggle button, listen for keydown events to intercept the `Escape` key and close the menu while returning focus to the button, and listen for click events on the document to dismiss the menu when pointer clicks land outside the menu and toggle button.
