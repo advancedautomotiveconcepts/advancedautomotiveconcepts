@@ -1,0 +1,3 @@
+## 2023-11-15 - Mobile Menu Toggle Accessibility
+**Learning:** In legacy or static websites, mobile navigation menus (#burgerBtn and #mobileMenu) are frequently left without proper keyboard interaction support. Adding Escape key closing (returning focus to the button) and pointer clicking outside the menu dramatically increases screen reader and keyboard accessibility, preventing the menu from trapping focus or cluttering visual layout.
+**Action:** Always bind window/document level listeners to close the mobile menu on keydown (Escape) and click outside, ensuring attributes like `aria-expanded` and `aria-label` are synchronized correctly.
