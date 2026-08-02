@@ -1,0 +1,3 @@
+## 2026-08-02 - Parallelize Font Resource Delivery with Google Fonts Preconnect
+**Learning:** Google Fonts serves its CSS from `fonts.googleapis.com` but the actual font files are served from `fonts.gstatic.com`. Preconnecting only to `fonts.googleapis.com` leaves a significant connection handshake latency (DNS lookup, TCP connect, SSL handshake) on the critical font-delivery path of `fonts.gstatic.com`, resulting in Flash of Unstyled Text (FOUT) or Flash of Invisible Text (FOIT).
+**Action:** Always preconnect to both `https://fonts.googleapis.com` and `https://fonts.gstatic.com` (using `crossorigin`) to allow the browser to initiate connection handshakes in parallel, saving precious milliseconds on font asset discovery.
