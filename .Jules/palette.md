@@ -1,0 +1,3 @@
+## 2025-08-02 - Accessible Mobile Menu Navigation and Interaction
+**Learning:** Adding baseline accessibility attributes like `aria-expanded` is helpful, but true keyboard and pointer usability requires dynamic `aria-label` state-switching, an Escape key listener to close the overlay (which also must restore focus back to the triggering element to prevent keyboard focus trap), and a click-outside listener for intuitive dismissal.
+**Action:** Always complement mobile drawer toggle controls with an Escape key listener for focus restoration and pointer click-outside-dismissal logic to ensure fully accessible navigation across both pointer and assistive technologies.
