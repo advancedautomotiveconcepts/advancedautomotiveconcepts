@@ -1,0 +1,3 @@
+## 2025-01-24 - Image Layout Stability & Lazy Loading
+**Learning:** Adding explicit dimensions (`width` and `height`) to image elements prevents Cumulative Layout Shift (CLS) as browsers can allocate layout space before the image resources load. Adding `loading="lazy"` to below-the-fold images optimizes bandwidth and page load time by deferring image retrieval until they are near the viewport.
+**Action:** Always inspect the actual dimensions of the static assets in the repository (e.g., using `file` command in bash) and add them alongside `loading="lazy"` for below-the-fold content to maximize performance and layout stability.
