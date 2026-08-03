@@ -1,0 +1,3 @@
+## 2025-03-09 - Accessible Mobile Menu Toggle
+**Learning:** Adding baseline mobile menu interactivity requires ensuring that assistive technologies can read state changes dynamically. Specifically, toggling 'aria-expanded' is crucial, but keeping screen reader users informed via updated 'aria-label' text and managing key focus (e.g. returning focus to the button on Escape press) significantly elevates the UX.
+**Action:** Always dynamically coordinate 'aria-expanded' and 'aria-label' attributes on burger button toggles, and handle Escape/outside click interaction patterns natively in Vanilla JS projects.
