@@ -1,0 +1,3 @@
+## 2026-08-06 - Accessible Mobile Menu Toggle Pattern
+**Learning:** Static ARIA attributes on interactive mobile menu elements (like `#burgerBtn`) cause visual and screen-reader state mismatch if not updated dynamically. Users navigating with assistive technologies or keyboards face navigation roadblocks if escape-to-close or click-outside-to-dismiss behavior is omitted, or if focus is not returned to the trigger.
+**Action:** Ensure all interactive mobile toggles dynamically update `aria-expanded` and `aria-label`, support `Escape` key close with focus return, and dismiss when clicking outside.
