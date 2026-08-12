@@ -1,0 +1,3 @@
+## 2025-08-12 - Prevent CLS and Optimize Initial Page Load with Image Attributes
+**Learning:** Cumulative Layout Shift (CLS) on static websites causes major layout recalculation overhead and poor page load performance. Specifying explicit `width` and `height` attributes matching the actual pixel dimensions of the images, alongside setting `loading="lazy"` on below-the-fold assets, allows browsers to reserve the exact layout space immediately and defer loading off-screen images.
+**Action:** Always inspect the actual dimensions of image files and include explicit `width` and `height` attributes in HTML `<img>` elements combined with CSS `max-width: 100%; height: auto;` globally. Use `loading="lazy"` on elements not visible in the initial viewport.
