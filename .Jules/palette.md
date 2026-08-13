@@ -1,0 +1,3 @@
+## 2024-08-13 - Enhancing Mobile Menu Accessibility & Pointer Interactions
+**Learning:** Mobile menus are often overlooked in standard accessibility auditing, but simple additions like dynamic ARIA labels, Escape key closure with focus management, and click-outside pointer support drastically improve screen-reader navigability and user-delight.
+**Action:** Always ensure the mobile menu toggle button dynamically reports its open/close state via both `aria-expanded` and `aria-label`, handle keyboard dismissals (Escape) while restoring user focus, and close menus gracefully when interacting outside their bounds.
