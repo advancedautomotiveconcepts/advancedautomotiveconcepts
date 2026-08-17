@@ -1,0 +1,3 @@
+## 2026-08-17 - Accessible Mobile Navigation Drawer Pattern
+**Learning:** Toggling `aria-expanded` alone on mobile menu buttons is insufficient for assistive technology users; dynamically updating `aria-label` between 'Open menu' and 'Close menu', listening for the `Escape` key to close the drawer while restoring focus to the trigger button, and handling click-outside dismissals are necessary for a fully accessible keyboard and pointer experience.
+**Action:** Always pair `aria-expanded` state changes with dynamic `aria-label` updates, `Escape` key dismissal with focus restoration, and click-outside handling when implementing slide-out or overlay navigation elements.
