@@ -15,6 +15,25 @@
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+.skip-link{
+  position:absolute;
+  top:-100px;
+  left:16px;
+  background:var(--red);
+  color:var(--white);
+  padding:10px 16px;
+  z-index:9999;
+  font-family:'Oswald',sans-serif;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  border-radius:2px;
+  transition:top 0.2s ease;
+}
+.skip-link:focus{
+  top:16px;
+  outline:2px solid var(--white);
+}
 body{
   margin:0;
   background:var(--paper);
