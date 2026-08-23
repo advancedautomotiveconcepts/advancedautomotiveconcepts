@@ -1,0 +1,3 @@
+## 2025-02-23 - Focus Visible Indicators for Accessible Keyboard Navigation
+**Learning:** Interactive elements (`a`, `button`, `input`, `textarea`, `select`) without custom `:focus-visible` styles rely on browser default outline rings, which are often low-contrast or hidden when reset with `outline: none` (e.g. in `.cform input:focus`), breaking keyboard navigation accessibility for screen reader and keyboard users.
+**Action:** Always provide explicit, high-contrast `:focus-visible` outlines (e.g., `outline: 2px solid var(--red-bright)`, `outline-offset: 2px`) on all focusable interactive controls while keeping standard mouse clicks clean.
