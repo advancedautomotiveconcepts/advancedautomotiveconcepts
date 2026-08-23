@@ -392,6 +392,12 @@ section{padding:84px 0;}
   padding:11px 12px; font-family:'Inter',sans-serif; font-size:14.5px; color:var(--ink);
 }
 .cform input:focus, .cform textarea:focus, .cform select:focus{ outline:none;border-color:var(--red); }
+
+/* ---------- focus visible indicators ---------- */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--red-bright);
+  outline-offset: 2px;
+}
 .cform textarea{resize:vertical;min-height:96px;}
 .cform .hp{position:absolute;left:-9999px;opacity:0;}
 .cform button{
