@@ -1,0 +1,3 @@
+## 2025-08-27 - Mobile Navigation Dismissability & Screen Reader Context
+**Learning:** Mobile disclosure menus (hamburger toggles) require both dynamic state announcement (`aria-label` updated between "Open menu" and "Close menu") and full keyboard dismissability via `Escape` key that restores focus to the trigger element. Without this, screen reader users miss context on toggle state change and keyboard users become trapped in overlay navigation.
+**Action:** Always toggle `aria-label` alongside `aria-expanded` on menu buttons, and register an `Escape` key listener on mobile menu overlays that returns focus to the toggle button upon closing.
