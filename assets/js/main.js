@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var burgerBtn = document.getElementById('burgerBtn');
   var mobileMenu = document.getElementById('mobileMenu');
   if (burgerBtn && mobileMenu) {
+    function closeMobileMenu() {
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.focus();
+      }
+    }
+
     burgerBtn.addEventListener('click', function () {
       var isOpen = mobileMenu.classList.toggle('open');
       burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -15,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenu.classList.remove('open');
         burgerBtn.setAttribute('aria-expanded', 'false');
       });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        closeMobileMenu();
+      }
     });
   }
 
