@@ -24,6 +24,30 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
+
+/* ---------- skip to main content ---------- */
+.skip-link{
+  position:absolute;
+  top:-999px;
+  left:16px;
+  z-index:100;
+  padding:12px 20px;
+  background:var(--red);
+  color:var(--white);
+  font-family:'Oswald',sans-serif;
+  font-size:14px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  font-weight:600;
+  border-radius:0 0 4px 4px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  transition:top 0.15s ease-in-out;
+}
+.skip-link:focus{
+  top:0;
+  outline:2px solid var(--white);
+  outline-offset:-2px;
+}
 h1,h2,h3,h4{
   font-family:'Oswald',sans-serif;
   text-transform:uppercase;
