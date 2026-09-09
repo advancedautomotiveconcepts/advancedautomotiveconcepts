@@ -1,0 +1,3 @@
+## 2025-09-09 - Accessible Mobile Navigation Overlay Controls
+**Learning:** Toggling `aria-expanded` alone on hamburger buttons does not fully convey the interactive state change for screen readers if the element's label remains "Open menu". Furthermore, overlay menus must support the `Escape` key to close and restore focus to the trigger button for keyboard accessibility.
+**Action:** When implementing mobile overlay menus, dynamically update `aria-label` ("Open menu" / "Close menu") alongside `aria-expanded` and register a keydown listener for `Escape` that restores focus to the menu toggle button.
