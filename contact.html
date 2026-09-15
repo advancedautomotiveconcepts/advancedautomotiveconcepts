@@ -158,6 +158,7 @@
     data._subject = 'New dealer inquiry — Advanced Automotive Concepts website';
 
     submitBtn.disabled = true;
+    submitBtn.setAttribute('aria-busy', 'true');
     submitBtn.textContent = 'Sending…';
     statusEl.textContent = 'Sending your message…';
     statusEl.style.color = '';
@@ -181,6 +182,7 @@
       statusEl.style.color = 'var(--red)';
     } finally {
       submitBtn.disabled = false;
+      submitBtn.setAttribute('aria-busy', 'false');
     }
   });
 </script>
