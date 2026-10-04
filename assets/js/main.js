@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
         burgerBtn.setAttribute('aria-expanded', 'false');
       });
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.focus();
+      }
+    });
   }
 
   // Scroll reveal
