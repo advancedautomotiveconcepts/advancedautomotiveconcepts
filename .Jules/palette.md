@@ -1,0 +1,3 @@
+## 2026-10-15 - Dynamic ARIA Label Updates and Escape Key Dismissal for Mobile Navigation
+**Learning:** Icon-only navigation toggle buttons require dynamic `aria-label` updates ("Open menu" / "Close menu") alongside `aria-expanded` to clearly convey state transitions to screen reader users, and modal/overlay components should always support `Escape` key dismissal with focus restoration to the trigger element.
+**Action:** When implementing interactive UI toggles or modal overlays, ensure dynamic ARIA label updates, `Escape` key event listeners, and explicit focus management (`triggerBtn.focus()`) are included out of the box.
