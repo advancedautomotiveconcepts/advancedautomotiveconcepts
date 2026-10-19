@@ -19,9 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Scroll reveal
-  var observer = new IntersectionObserver(function (entries) {
+  var observer = new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); }
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target); // Stop tracking element once revealed to reduce scroll overhead
+      }
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
