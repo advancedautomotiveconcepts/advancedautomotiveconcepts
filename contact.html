@@ -95,7 +95,7 @@
             <textarea id="f-msg" name="Message" placeholder="e.g. Loss rate on pre-owned units, current F&I menu, timing"></textarea>
           </div>
           <button type="submit" id="formSubmitBtn">Send Inquiry</button>
-          <div class="form-note" id="formStatus">Submissions are emailed directly to mlarsen@advancedautomotiveconcepts.net.</div>
+          <div class="form-note" id="formStatus" role="status" aria-live="polite">Submissions are emailed directly to mlarsen@advancedautomotiveconcepts.net.</div>
         </form>
       </div>
       <div class="cta-right">
@@ -158,6 +158,7 @@
     data._subject = 'New dealer inquiry — Advanced Automotive Concepts website';
 
     submitBtn.disabled = true;
+    submitBtn.setAttribute('aria-busy', 'true');
     submitBtn.textContent = 'Sending…';
     statusEl.textContent = 'Sending your message…';
     statusEl.style.color = '';
@@ -181,6 +182,7 @@
       statusEl.style.color = 'var(--red)';
     } finally {
       submitBtn.disabled = false;
+      submitBtn.removeAttribute('aria-busy');
     }
   });
 </script>
