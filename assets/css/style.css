@@ -33,7 +33,8 @@ h1,h2,h3,h4{
 }
 .mono{ font-family:'JetBrains Mono',monospace; }
 a{color:inherit;text-decoration:none;}
-img{max-width:100%;display:block;}
+/* Performance optimization: height:auto ensures intrinsic aspect ratio is preserved when width/height attributes are set, eliminating Cumulative Layout Shift (CLS) */
+img{max-width:100%;height:auto;display:block;}
 .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
 @media (max-width:640px){ .wrap{padding:0 20px;} }
 
