@@ -1,0 +1,3 @@
+## 2026-03-31 - Mobile Drawer Accessibility and Keyboard Dismissal
+**Learning:** For mobile drawer navigation toggles, synchronizing `aria-expanded` alone is insufficient for screen reader users and keyboard navigation. Managing state through a unified helper that updates both `aria-expanded` and an action-oriented `aria-label` ("Open menu" vs "Close menu"), alongside an Escape key listener that restores focus to the trigger button, prevents focus loss and ensures clear assistive technology feedback.
+**Action:** Always pair `aria-expanded` toggles with dynamic `aria-label` updates and keyboard Escape dismissal with focus restoration on disclosure and drawer components.
