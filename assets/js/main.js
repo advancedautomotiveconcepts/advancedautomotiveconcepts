@@ -19,9 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Scroll reveal
-  var observer = new IntersectionObserver(function (entries) {
+  // Performance optimization: Unobserve targets once they enter the viewport.
+  // Since reveal animations only run once, unobserving revealed elements eliminates redundant
+  // intersection calculations on subsequent user scrolls, saving main-thread CPU time.
+  var observer = new IntersectionObserver(function (entries, obs) {
     entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); }
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
